@@ -1,4 +1,4 @@
-name: Publish to GitHub Pages
+name: Build and deploy flutter web app
 
 on:
   push:
@@ -9,8 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
-      - uses: bluefireteam/flutter-gh-pages@v7
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
         with:
-          baseHref: /20240504/
+          channel: 'main'
+      - run: flutter pub get
+      - run: flutter config --enable-web
+      - run: flutter build web --base-href "/${{ github.event.repository.name }}/"
+
+      - run: git config user.name jiyeonjoy
+      - run: git config user.email choi02647@naver.com
+      - run: git --work-tree build/web add --all
+      - run: git commit -m "Automatic deployment by github-actions"
+      - run: git push origin HEAD:main --force
