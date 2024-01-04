@@ -21,4 +21,4 @@ jobs:
       - run: git config user.email choi02647@naver.com
       - run: git --work-tree build/web add --all
       - run: git commit -m "Automatic deployment by github-actions"
-      - run: git push origin HEAD:main --force
+      - run: git push origin HEAD:gh_pages --force
