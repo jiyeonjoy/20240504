@@ -17,6 +17,8 @@ dependencies:
   # state management, dependency injection, route router_management
   get: ^4.6.6
 
+  google_fonts: ^6.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -25,3 +27,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/icons/
