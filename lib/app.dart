@@ -19,6 +19,9 @@ class _WeddingInvitationAppState extends State<WeddingInvitationApp> {
       getPages: AppPages.pages,
       defaultTransition: Transition.rightToLeft,
       transitionDuration: const Duration(milliseconds: 200),
+      theme: ThemeData(
+        fontFamily: 'defaultFont',
+      ),
       builder: (context, child) {
         return ScrollConfiguration(
           behavior: NoEffectBehavior(),

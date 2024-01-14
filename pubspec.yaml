@@ -26,6 +26,14 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  fonts:
+    - family: defaultFont
+      fonts:
+        - asset: assets/fonts/default_font_light.otf
+          weight: 300
+        - asset: assets/fonts/default_font_bold.otf
+          weight: 500
+
   assets:
     - assets/images/
     - assets/images/icons/
