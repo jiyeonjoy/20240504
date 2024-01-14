@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
