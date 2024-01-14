@@ -15,9 +15,7 @@ class MainView extends StatelessWidget {
           padding: edgeInsets(top: 40, bottom: 12, horizontal: 20),
           child: Text(
             '우  리  결  혼  합  니  다',
-            style: GoogleFonts.sunflower(
-              textStyle: textStyleBlack600(20)
-            ),
+            style: textStyleBlack600(20)
           ),
         ),
         R.image.youngwoojiyeon1.image().paddingSymmetric(horizontal: 20),
@@ -25,9 +23,7 @@ class MainView extends StatelessWidget {
           padding: edgeInsets(top: 30, bottom: 10, horizontal: 20),
           child: Text(
             '신영우 * 최지연',
-            style: GoogleFonts.singleDay(
-                textStyle: textStyleBlack600(30)
-            ),
+            style: textStyleBlack600(30)
           ),
         ),
         Padding(
@@ -35,10 +31,7 @@ class MainView extends StatelessWidget {
           child: Text(
             '2024. 05. 04. 토요일 PM 3:00\n아펠가모 반포 LL층',
             textAlign: TextAlign.center,
-            style: GoogleFonts.gowunDodum(
-              textStyle: textStyleBlack600(20),
-            ),
-          ),
+            style: textStyleBlack600(20),
 
         ),
       ],
