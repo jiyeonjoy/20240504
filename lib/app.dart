@@ -13,6 +13,7 @@ class _WeddingInvitationAppState extends State<WeddingInvitationApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: '영우 지연 결혼합니다!',
       debugShowCheckedModeBanner: false,
       enableLog: true,
       initialRoute: AppPages.initialPage,
