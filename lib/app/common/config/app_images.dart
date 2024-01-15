@@ -79,6 +79,9 @@ class AppImages {
 
   AppImage get banner =>
       const AppImage('${_imagePath}banner.png');
+
+  AppImage get thankYou =>
+      const AppImage('${_imagePath}thankYou.png');
 }
 
 class AppImage {
