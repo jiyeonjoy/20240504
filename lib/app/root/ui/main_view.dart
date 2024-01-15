@@ -24,11 +24,11 @@ class MainView extends StatelessWidget {
             if (images.isEmpty) {
               return const SizedBox.shrink();
             }
-            return ImageFallView(
+            return SakuraBlizzardView(
               viewSize: Size(width, height),
               fps: 60,
-              images: images,
-              backImages: images,
+              // images: images,
+              // backImages: images,
               frontObjSize: const VRange(min: 12, max: 48),
               backObjSize: const VRange(min: 12, max: 48),
               child: Column(
