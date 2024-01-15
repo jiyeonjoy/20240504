@@ -20,8 +20,9 @@ class AppColors {
   final Color color_F8F9FA = const Color(0xFFF8F9FA);
   final Color color_EEF0F3 = const Color(0xFFEEF0F3);
 
-  final Color color_0064FF = const Color(0xFF0064FF);
-  final Color color_FDE8E4 = const Color(0xFFFDE8E4);
-  final Color color_3D8BFF = const Color(0xFF3D8BFF);
-  final Color color_F91E30 = const Color(0xFFF91E30);
+  final Color color_1E403A = const Color(0xFF1E403A);
+  final Color color_F29727 = const Color(0xFFF29727);
+  final Color color_ECDCC2 = const Color(0xFFECDCC2);
+  final Color color_F26A4B = const Color(0xFFF26A4B);
+  final Color color_D93A2B = const Color(0xFFD93A2B);
 }

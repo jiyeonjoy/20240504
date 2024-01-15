@@ -76,6 +76,9 @@ class AppImages {
 
   AppImage get couple =>
       const AppImage('${_imagePath}couple.png');
+
+  AppImage get banner =>
+      const AppImage('${_imagePath}banner.png');
 }
 
 class AppImage {

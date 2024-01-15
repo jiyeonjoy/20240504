@@ -26,7 +26,7 @@ class MainView extends StatelessWidget {
         Padding(
           padding: edgeInsets(top: 20, horizontal: 20, bottom: 60),
           child: Text(
-            '2024. 05. 04. 토요일 PM 3:00\n아펠가모 반포 LL층',
+            '2024. 05. 04. 토요일 PM 3:30\n아펠가모 반포 LL층',
             textAlign: TextAlign.center,
             style: textStyleBlackNormal(18, height: 25/15),
           ),
