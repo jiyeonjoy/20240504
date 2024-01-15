@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
+import 'package:get/get.dart';
 import 'package:sakura_blizzard/sakura_blizzard.dart';
 import 'package:util_simple_3d/util_simple_3d.dart';
 
@@ -16,17 +18,17 @@ class MainView extends StatelessWidget {
     return SizedBox(
       width: width,
       height: height,
-      child: FutureBuilder(
-        future: RootPageController.to.loadFallingImage(),
-          builder: (BuildContext context, AsyncSnapshot snapshot) {
-          if (snapshot.hasData == false || snapshot.hasError) {
-            return const SizedBox.shrink();
-          } else {
+      child: Obx(
+          () {
+            List<Uint8List> images = RootPageController.to.fallingImages;
+            if (images.isEmpty) {
+              return const SizedBox.shrink();
+            }
             return ImageFallView(
               viewSize: Size(width, height),
               fps: 60,
-              images: snapshot.data,
-              backImages: snapshot.data,
+              images: images,
+              backImages: images,
               frontObjSize: const VRange(min: 12, max: 48),
               backObjSize: const VRange(min: 12, max: 48),
               child: Column(
@@ -67,8 +69,7 @@ class MainView extends StatelessWidget {
               ),
             );
           }
-        }
-      ),
+      )
     );
   }
 }
