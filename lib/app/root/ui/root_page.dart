@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
 import 'package:flutter_20240504/app/root/ui/contact_view.dart';
 import 'package:flutter_20240504/app/root/ui/gallery_view.dart';
@@ -13,9 +14,9 @@ class RootPage extends GetView<RootPageController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: R.color.color_ECDCC2,
-      body: SafeArea(
+      body: const SafeArea(
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(child: MainView()),
