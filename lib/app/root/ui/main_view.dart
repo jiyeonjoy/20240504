@@ -7,31 +7,34 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
-          child: R.image.couple.image(
-            fit: BoxFit.cover,
+    return Container(
+      color: R.color.white,
+      child: Column(
+        children: [
+          Container(
+            constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
+            child: R.image.couple.image(
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        Padding(
-          padding: edgeInsets(top: 30, horizontal: 20),
-          child: Text(
-            '신  영  우\n그리고\n최  지  연',
-            style: textStyleBlackNormal(30, height: 30/20),
-            textAlign: TextAlign.center,
+          Padding(
+            padding: edgeInsets(top: 30, horizontal: 20),
+            child: Text(
+              '신  영  우\n그리고\n최  지  연',
+              style: textStyleBlackNormal(30, height: 30/20),
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        Padding(
-          padding: edgeInsets(top: 20, horizontal: 20, bottom: 60),
-          child: Text(
-            '2024. 05. 04. 토요일 PM 3:30\n아펠가모 반포 LL층',
-            textAlign: TextAlign.center,
-            style: textStyleBlackNormal(18, height: 25/15),
+          Padding(
+            padding: edgeInsets(top: 20, horizontal: 20, bottom: 60),
+            child: Text(
+              '2024. 05. 04. 토요일 PM 3:30\n아펠가모 반포 LL층',
+              textAlign: TextAlign.center,
+              style: textStyleBlackNormal(18, height: 25/15),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
