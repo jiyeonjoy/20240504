@@ -7,42 +7,31 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height -
-        MediaQuery.of(context).padding.top;
-    return SizedBox(
-      width: width,
-      height: height,
-      child: Column(
-        children: [
-          SizedBox(
-            width: width,
-            // height: height/2,
-            child: R.image.couple.image(
-              fit: BoxFit.cover,
-            ),
+    return Column(
+      children: [
+        Container(
+          constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
+          child: R.image.couple.image(
+            fit: BoxFit.cover,
           ),
-          const Spacer(flex: 2),
-          Padding(
-            padding: edgeInsets(horizontal: 20),
-            child: Text(
-              '신  영  우\n그리고\n최  지  연',
-              style: textStyleBlackNormal(30, height: 30/20),
-              textAlign: TextAlign.center,
-            ),
+        ),
+        Padding(
+          padding: edgeInsets(top: 30, horizontal: 20),
+          child: Text(
+            '신  영  우\n그리고\n최  지  연',
+            style: textStyleBlackNormal(30, height: 30/20),
+            textAlign: TextAlign.center,
           ),
-          const Spacer(flex: 1),
-          Padding(
-            padding: edgeInsets(horizontal: 20),
-            child: Text(
-              '2024. 05. 04. 토요일 PM 3:00\n아펠가모 반포 LL층',
-              textAlign: TextAlign.center,
-              style: textStyleBlackNormal(18, height: 25/15),
-            ),
+        ),
+        Padding(
+          padding: edgeInsets(top: 20, horizontal: 20, bottom: 60),
+          child: Text(
+            '2024. 05. 04. 토요일 PM 3:00\n아펠가모 반포 LL층',
+            textAlign: TextAlign.center,
+            style: textStyleBlackNormal(18, height: 25/15),
           ),
-          const Spacer(flex: 4),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
