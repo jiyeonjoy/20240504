@@ -17,7 +17,7 @@ class MainView extends StatelessWidget {
         children: [
           SizedBox(
             width: width,
-            height: height/2,
+            // height: height/2,
             child: R.image.couple.image(
               fit: BoxFit.cover,
             ),
@@ -27,7 +27,7 @@ class MainView extends StatelessWidget {
             padding: edgeInsets(horizontal: 20),
             child: Text(
               '신  영  우\n그리고\n최  지  연',
-              style: textStyleBlack600(30, height: 30/20),
+              style: textStyleBlackNormal(30, height: 30/20),
               textAlign: TextAlign.center,
             ),
           ),
@@ -37,7 +37,7 @@ class MainView extends StatelessWidget {
             child: Text(
               '2024. 05. 04. 토요일 PM 3:00\n아펠가모 반포 LL층',
               textAlign: TextAlign.center,
-              style: textStyleBlack600(18, height: 25/15),
+              style: textStyleBlackNormal(18, height: 25/15),
             ),
           ),
           const Spacer(flex: 4),

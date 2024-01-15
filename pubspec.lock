@@ -123,30 +123,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
-  sakura_blizzard:
-    dependency: "direct main"
-    description:
-      name: sakura_blizzard
-      sha256: "1cc012fe4c6efa21ee016122efce9c4fef4cc3bec0945550c450ecbf5f222dfe"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.5"
-  simple_3d:
-    dependency: transitive
-    description:
-      name: simple_3d
-      sha256: "1279c33423912eff6d5c4c3b6d528a77738874f42e0d999809edbc4b961d9deb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "12.1.0"
-  simple_3d_renderer:
-    dependency: transitive
-    description:
-      name: simple_3d_renderer
-      sha256: "6ba002ffb8a87ab1ab2bf355dffe0defa6a8d5b844d4a8bae16686fda8a347df"
-      url: "https://pub.dev"
-    source: hosted
-    version: "19.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -200,14 +176,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.1"
-  util_simple_3d:
-    dependency: "direct main"
-    description:
-      name: util_simple_3d
-      sha256: f9d616af89acdbcd13bf84571c93697129c91a6fa1fedbeadf59de88d12297e5
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.3.2"
   vector_math:
     dependency: transitive
     description:
