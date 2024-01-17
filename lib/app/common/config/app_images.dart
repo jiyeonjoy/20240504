@@ -82,6 +82,9 @@ class AppImages {
 
   AppImage get thankYou =>
       const AppImage('${_imagePath}thankYou.png');
+
+  AppImage get flowers =>
+      const AppImage('${_imagePath}flowers.png');
 }
 
 class AppImage {
