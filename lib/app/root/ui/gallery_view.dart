@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
+import 'package:flutter_20240504/app/common/ui/title_view.dart';
 
 class GalleryView extends StatelessWidget {
   const GalleryView({super.key});
@@ -6,9 +8,14 @@ class GalleryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 700,
-      color: Colors.green,
+      color: Colors.white,
+      constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
+      padding: edgeInsets(horizontal: 20, top: 50, bottom: 30),
+      child: const Column(
+        children: [
+          TitleView('G A L L E R Y'),
+        ],
+      )
     );
   }
 }

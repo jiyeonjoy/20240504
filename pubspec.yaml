@@ -34,6 +34,15 @@ flutter:
         - asset: assets/fonts/default_font_bold.otf
           weight: 500
 
+    - family: nexonGothicFont
+      fonts:
+        - asset: assets/fonts/nexon_gothic_medium.otf
+          weight: 400
+        - asset: assets/fonts/nexon_gothic_bold.otf
+          weight: 600
+        - asset: assets/fonts/nexon_gothic_extra_bold.otf
+          weight: 800
+
   assets:
     - assets/images/
     - assets/images/icons/
