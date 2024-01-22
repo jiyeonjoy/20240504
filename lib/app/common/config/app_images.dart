@@ -87,6 +87,14 @@ class AppImages {
 
   AppImage get icon_flower =>
       const AppImage('${_iconPath}flower.png');
+  AppImage get icon_botanical =>
+      const AppImage('${_iconPath}botanical.png');
+  AppImage get icon_phone_round =>
+      const AppImage('${_iconPath}phone_round.png');
+  AppImage get icon_phone =>
+      const AppImage('${_iconPath}phone.png');
+  AppImage get icon_email =>
+      const AppImage('${_iconPath}email.png');
 }
 
 class AppImage {

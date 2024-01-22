@@ -8,91 +8,64 @@ class ContactView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: R.color.color_F9F9FB,
       padding: edgeInsets(horizontal: 20, vertical: 50),
       child: Column(
         children: [
-          Row(
-            children: [
-              _buildMainContactView('신랑에게 연락하기'),
-              _buildMainContactView('신부에게 연락하기'),
-            ],
-          ),
-          Row(
-            children: [
-              _buildSubContactView('신랑', '신종식', '손희송'),
-              _buildSubContactView('신부', '최성식', '허인숙'),
-            ],
-          )
+          R.image.icon_botanical.image(),
+          _buildSubView('신종식 · 손희송', ' 의 아들 ', '신영우'),
+          _buildSubView('최성식 · 허인숙', ' 의  딸 ', '최지연'),
+          const SizedBox(height: 25),
+          _buildContactButton(),
         ],
       ),
     );
   }
 
-  Widget _buildMainContactView(String title) {
-    return Expanded(
-      child: Column(
+  Widget _buildSubView(String first, String second, String third) {
+    return Container(
+      padding: edgeInsets(top: 10),
+      alignment: Alignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            title,
-            style: textStyleBlack600(25),
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: first,
+              style: textStyleBold(R.color.black, 23, height: 1),
+              children: <TextSpan>[
+                TextSpan(
+                    text: second,
+                    style: textStyleLight(R.color.color_36393D, 18)),
+                TextSpan(text: third),
+              ],
+            ),
           ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.phone),),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.mail_outline),)
-            ],
-          ),
-          const SizedBox(height: 50),
+          IconButton(onPressed: () {}, icon: R.image.icon_phone_round.image(width: 24),),
         ],
       ),
     );
   }
 
-  Widget _buildSubContactView(String who, String father, String mother) {
-    return Expanded(
-      child: Column(
-        children: [
-          Text(
-            '$who 측 혼주',
-            style: textStyleBlackLight(20, height: 30/20),
-          ),
-          const SizedBox(height: 20),
-          _buildFamilyContactView('아버지', father),
-          _buildFamilyContactView('어머니', mother),
-        ],
+  Widget _buildContactButton() {
+    return SizedBox(
+      width: 320,
+      height: 42,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith((states) => R.color.color_171819),
+          shape: MaterialStateProperty.resolveWith((states) => RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          )),
+        ),
+        child: Text(
+          '혼주에게 연락하기',
+          style: textStyleWhiteMedium(20),
+          textAlign: TextAlign.center,
+        ),
       ),
-    );
-  }
-
-  Widget _buildFamilyContactView(String title, String name) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              title,
-              style: textStyleBlackLight(15),
-            ),
-            const SizedBox(width: 8),
-            Text(
-              name,
-              style: textStyleBlack600(20),
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.phone),),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.mail_outline),)
-          ],
-        ),
-        const SizedBox(height: 15),
-      ],
     );
   }
 }
