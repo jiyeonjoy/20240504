@@ -17,6 +17,7 @@ class GalleryView extends StatelessWidget {
           Container(
             constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
             child: GridView.builder(
+                physics: const ClampingScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                 ),
