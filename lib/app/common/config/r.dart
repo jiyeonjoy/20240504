@@ -36,7 +36,8 @@ class RFontWeight {
 
 enum FontFamily {
   defaultFont('defaultFont'),
-  nexonGothicFont('nexonGothicFont');
+  nexonGothicFont('nexonGothicFont'),
+  cormorantGaramondFont('cormorantGaramondFont');
 
   final String text;
 

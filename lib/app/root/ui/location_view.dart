@@ -8,11 +8,11 @@ class LocationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
         padding: edgeInsets(horizontal: 20, top: 50, bottom: 30),
         child: const Column(
           children: [
-            TitleView('L O C A T I O N'),
+            TitleView('LOCATION'),
+            SizedBox(height: 30),
           ],
         )
     );

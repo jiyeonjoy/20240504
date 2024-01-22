@@ -12,8 +12,8 @@ class TitleView extends StatelessWidget {
         R.image.icon_flower.image(),
         Text(
           title,
-          style: textStyle600(R.color.color_594E47, 30,
-              fontFamily: FontFamily.nexonGothicFont),
+          style: textStyleNormal(R.color.color_594E47, 30,
+              fontFamily: FontFamily.cormorantGaramondFont),
         ),
       ],
     );

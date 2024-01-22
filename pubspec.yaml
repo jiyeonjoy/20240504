@@ -42,6 +42,9 @@ flutter:
           weight: 600
         - asset: assets/fonts/nexon_gothic_extra_bold.otf
           weight: 800
+    - family: cormorantGaramondFont
+      fonts:
+        - asset: assets/fonts/CormorantGaramond-Regular.ttf
 
   assets:
     - assets/images/
