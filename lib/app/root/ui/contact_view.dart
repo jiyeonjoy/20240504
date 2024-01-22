@@ -12,8 +12,8 @@ class ContactView extends StatelessWidget {
       child: Column(
         children: [
           R.image.icon_botanical.image(),
-          _buildSubView('신종식 · 손희송', ' 의 아들 ', '신영우'),
-          _buildSubView('최성식 · 허인숙', ' 의  딸 ', '최지연'),
+          _buildSubView('신종식 · 손희송', '  의  아들  ', '신영우'),
+          _buildSubView('최성식 · 허인숙', '  의   딸  ', '최지연'),
           const SizedBox(height: 25),
           _buildContactButton(),
         ],
@@ -33,7 +33,7 @@ class ContactView extends StatelessWidget {
             textAlign: TextAlign.center,
             text: TextSpan(
               text: first,
-              style: textStyleBold(R.color.black, 23, height: 1),
+              style: textStyleBold(R.color.black, 23),
               children: <TextSpan>[
                 TextSpan(
                     text: second,
@@ -42,7 +42,13 @@ class ContactView extends StatelessWidget {
               ],
             ),
           ),
-          IconButton(onPressed: () {}, icon: R.image.icon_phone_round.image(width: 24),),
+          Padding(
+            padding: edgeInsets(top: 5),
+            child: IconButton(
+              onPressed: () {},
+              icon: R.image.icon_phone_round.image(width: 24),
+            ),
+          ),
         ],
       ),
     );
