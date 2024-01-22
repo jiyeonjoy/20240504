@@ -20,7 +20,8 @@ Future<T> contactDialog<T>() async {
             ),
             color: R.color.white,
             elevation: 5,
-            child: Padding(
+            child: Container(
+              constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
               padding: edgeInsets(top: 10, bottom: 30, horizontal: 40),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
