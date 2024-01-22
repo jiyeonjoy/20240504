@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
+import 'package:flutter_20240504/app/root/ui/calendar_view.dart';
 import 'package:flutter_20240504/app/root/ui/contact_view.dart';
 import 'package:flutter_20240504/app/root/ui/gallery_view.dart';
 import 'package:flutter_20240504/app/root/ui/greeting_view.dart';
@@ -30,6 +31,7 @@ class RootPage extends GetView<RootPageController> {
                 SliverToBoxAdapter(child: MainView()),
                 SliverToBoxAdapter(child: GreetingView()),
                 SliverToBoxAdapter(child: ContactView()),
+                SliverToBoxAdapter(child: CalendarView()),
                 SliverToBoxAdapter(child: GalleryView()),
                 SliverToBoxAdapter(child: LocationView()),
                 SliverToBoxAdapter(child: TransferView()),
