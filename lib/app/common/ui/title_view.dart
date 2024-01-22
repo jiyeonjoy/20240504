@@ -9,7 +9,7 @@ class TitleView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        R.image.flowers.image(width: 150),
+        R.image.icon_flower.image(),
         Text(
           title,
           style: textStyle600(R.color.color_594E47, 30,

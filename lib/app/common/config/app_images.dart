@@ -83,10 +83,10 @@ class AppImages {
   AppImage get thankYou =>
       const AppImage('${_imagePath}thankYou.png');
 
-  AppImage get flowers =>
-      const AppImage('${_imagePath}flowers.png');
-
   AppImage get bg_img_white => const AppImage('${_imagePath}bg_img_white.jpg');
+
+  AppImage get icon_flower =>
+      const AppImage('${_iconPath}flower.png');
 }
 
 class AppImage {

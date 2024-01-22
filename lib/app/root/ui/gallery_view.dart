@@ -8,7 +8,6 @@ class GalleryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
       constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
       padding: edgeInsets(horizontal: 20, top: 50, bottom: 30),
       child: const Column(
