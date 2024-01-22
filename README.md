@@ -1,6 +1,7 @@
 # flutter_20240504
 
 신영우 최지연 모바일 청첩장 입니다.
+- [바로가기](https://jiyeonjoy.github.io/20240504/)
 
 ## Getting Started
 
