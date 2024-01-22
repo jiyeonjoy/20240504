@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
+import 'package:flutter_20240504/app/root/ui/contact_dialog.dart';
 
 class ContactView extends StatelessWidget {
   const ContactView({super.key});
@@ -59,7 +60,9 @@ class ContactView extends StatelessWidget {
       width: 320,
       height: 42,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          contactDialog();
+        },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) => R.color.color_171819),
           shape: MaterialStateProperty.resolveWith((states) => RoundedRectangleBorder(

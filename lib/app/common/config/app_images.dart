@@ -95,6 +95,8 @@ class AppImages {
       const AppImage('${_iconPath}phone.png');
   AppImage get icon_email =>
       const AppImage('${_iconPath}email.png');
+  AppImage get icon_bee =>
+      const AppImage('${_iconPath}bee.png');
 }
 
 class AppImage {
