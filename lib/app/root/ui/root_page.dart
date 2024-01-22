@@ -15,18 +15,28 @@ class RootPage extends GetView<RootPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: R.color.color_ECDCC2,
-      body: const SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: MainView()),
-            SliverToBoxAdapter(child: GreetingView()),
-            SliverToBoxAdapter(child: ContactView()),
-            SliverToBoxAdapter(child: GalleryView()),
-            SliverToBoxAdapter(child: LocationView()),
-            SliverToBoxAdapter(child: TransferView()),
-          ],
-        ),
+      backgroundColor: R.color.white,
+      body: Stack(
+        children: [
+          Positioned.fill(
+              child: R.image.bg_img_white.image(
+            repeat: ImageRepeat.repeat,
+          )),
+          const SafeArea(
+            bottom: false,
+            child: CustomScrollView(
+              physics: ClampingScrollPhysics(),
+              slivers: [
+                SliverToBoxAdapter(child: MainView()),
+                SliverToBoxAdapter(child: GreetingView()),
+                SliverToBoxAdapter(child: ContactView()),
+                SliverToBoxAdapter(child: GalleryView()),
+                SliverToBoxAdapter(child: LocationView()),
+                SliverToBoxAdapter(child: TransferView()),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

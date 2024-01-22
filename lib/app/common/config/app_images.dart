@@ -85,6 +85,8 @@ class AppImages {
 
   AppImage get flowers =>
       const AppImage('${_imagePath}flowers.png');
+
+  AppImage get bg_img_white => const AppImage('${_imagePath}bg_img_white.jpg');
 }
 
 class AppImage {
@@ -96,7 +98,8 @@ class AppImage {
     Key? key,
     double? width,
     double? height,
-    BoxFit fit = BoxFit.fill,
+    BoxFit? fit,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
   }) {
     return Image.asset(
       path,
@@ -104,16 +107,23 @@ class AppImage {
       width: width,
       height: height,
       fit: fit,
+      repeat: repeat,
     );
   }
 
-  Image imageSize({Key? key, double? size, BoxFit fit = BoxFit.fill}) {
+  Image imageSize({
+    Key? key,
+    double? size,
+    BoxFit fit = BoxFit.fill,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+  }) {
     return Image.asset(
       path,
       key: key,
       width: size,
       height: size,
       fit: fit,
+      repeat: repeat,
     );
   }
 }
