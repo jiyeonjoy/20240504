@@ -40,7 +40,7 @@ class _LocationViewState extends State<LocationView> {
                     map.onclick = moveMap;
                 }
                 function moveMap() {
-                    return window.open("https://map.kakao.com/link/to/1807085957", "_blank")
+                    return window.open("https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place", "_blank")
                 }
             </script>
         </body>
