@@ -32,7 +32,8 @@ class _LocationViewState extends State<LocationView> {
         <head>
         </head>
         <body style="padding:0; margin:0;">
-            <img id='map' src="https://jiyeonjoy.github.io/20240504/icons/map.png" style="width:400px;height:400px;margin: 0 auto;border-radius: 8px;" />
+            <img id='map' src="https://jiyeonjoy.github.io/20240504/icons/map.png" 
+            style="width:300px;height:300px;margin: 0 auto;border-radius: 8px;"/>
             <script>
                 window.onload = function() {
                     var map = document.getElementById("map");
@@ -61,8 +62,8 @@ class _LocationViewState extends State<LocationView> {
             const TitleView('LOCATION'),
             const SizedBox(height: 30),
             SizedBox(
-              width: 400,
-              height: 420,
+              width: 300,
+              height: 300,
               child: WebView(
                 controller: RootPageController.to.webViewController,
               ),
