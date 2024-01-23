@@ -30,25 +30,10 @@ class _LocationViewState extends State<LocationView> {
         <!DOCTYPE html>
         <html>
         <head>
-            <script type="text/javascript" src='https://dapi.kakao.com/v2/maps/sdk.js?autoload=true&appkey=7047bd8eeaeb999d573881f23d55b160'></script>
         </head>
         <body style="padding:0; margin:0;">
-            <div id='map' style="width:300px;height:300px;margin: 0 auto;border-radius: 8px;" />
+            <img id='map' src="https://jiyeonjoy.github.io/20240504/icons/map.png" style="width:300px;height:300px;margin: 0 auto;border-radius: 8px;" />
             <script>
-                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-                    mapOption = {
-                        center: new kakao.maps.LatLng(37.502205, 127.001139), // 지도의 중심좌표
-                        level: 3,
-                        draggable: false,
-                    };
-  
-                var map = new kakao.maps.Map(mapContainer, mapOption);  
-                var markerPosition = new kakao.maps.LatLng(37.50083002236247, 127.00319198989602);  
-                var marker = new kakao.maps.Marker({
-                    position: markerPosition
-                });  
-                marker.setMap(map);
-  
                 window.onload = function() {
                     var map = document.getElementById("map");
                     map.onclick = moveMap;
