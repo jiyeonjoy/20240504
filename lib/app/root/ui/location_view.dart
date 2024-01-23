@@ -60,10 +60,10 @@ class _LocationViewState extends State<LocationView> {
         child: Column(
           children: [
             const TitleView('LOCATION'),
-            const SizedBox(height: 30),
+            const SizedBox(height: 10),
             SizedBox(
               width: 300,
-              height: 300,
+              height: 310,
               child: WebView(
                 controller: RootPageController.to.webViewController,
               ),
