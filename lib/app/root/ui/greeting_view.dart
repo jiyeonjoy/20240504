@@ -11,8 +11,7 @@ class GreetingView extends StatelessWidget {
       color: R.color.color_ECDCC2,
       child: Column(
         children: [
-          Container(
-            constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
+          Padding(
             padding: edgeInsets(horizontal: 100, top: 70, bottom: 50),
             child: R.image.banner.image(),
           ),

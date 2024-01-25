@@ -14,22 +14,19 @@ class GalleryView extends StatelessWidget {
         children: [
           const TitleView('GALLERY'),
           const SizedBox(height: 30),
-          Container(
-            constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
-            child: GridView.builder(
-                physics: const ClampingScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                ),
-                itemCount: RootPageController.to.galleryList.length,
-                shrinkWrap: true,
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    padding: edgeInsets(all: 10),
-                    child: RootPageController.to.galleryList[index].image(),
-                  );
-                }
-            ),
+          GridView.builder(
+              physics: const ClampingScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+              ),
+              itemCount: RootPageController.to.galleryList.length,
+              shrinkWrap: true,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  padding: edgeInsets(all: 10),
+                  child: RootPageController.to.galleryList[index].image(),
+                );
+              }
           )
         ],
       )

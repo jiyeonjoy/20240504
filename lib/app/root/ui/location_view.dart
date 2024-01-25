@@ -57,6 +57,7 @@ class _LocationViewState extends State<LocationView> {
   Widget build(BuildContext context) {
     return Container(
         padding: edgeInsets(horizontal: 20, top: 50, bottom: 30),
+        width: double.infinity,
         child: Column(
           children: [
             const TitleView('LOCATION'),

@@ -13,6 +13,7 @@ class AppColors {
   final Color white = Colors.white;
 
   final Color color_171819 = const Color(0xFF171819);
+  final Color color_333333 = const Color(0xFF333333);
   final Color color_36393D = const Color(0xFF36393D);
   final Color color_51565C = const Color(0xFF51565C);
   final Color color_6E747A = const Color(0xFF6E747A);
