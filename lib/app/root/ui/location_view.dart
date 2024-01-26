@@ -1,57 +1,11 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:flutter_20240504/app/common/ui/title_view.dart';
-import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
-import 'package:webview_universal/webview_universal.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class LocationView extends StatefulWidget {
+class LocationView extends StatelessWidget {
   const LocationView({super.key});
-
-  @override
-  State<LocationView> createState() => _LocationViewState();
-}
-
-class _LocationViewState extends State<LocationView> {
-
-  @override
-  void initState() {
-    super.initState();
-    task();
-  }
-
-  Future<void> task() async {
-    await RootPageController.to.webViewController.init(
-      context: context,
-      uri: Uri.parse(Uri.dataFromString(
-        '''
-        <!DOCTYPE html>
-        <html>
-        <head>
-        </head>
-        <body style="padding:0; margin:0;">
-            <img id='map' src="https://jiyeonjoy.github.io/20240504/icons/map.png" 
-            style="width:300px;height:300px;margin: 0 auto;border-radius: 8px;"/>
-            <script>
-                window.onload = function() {
-                    var map = document.getElementById("map");
-                    map.onclick = moveMap;
-                }
-                function moveMap() {
-                    return window.open("https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place", "_blank")
-                }
-            </script>
-        </body>
-        </html>
-        ''',
-        mimeType: 'text/html',
-        encoding: Encoding.getByName('utf-8'),
-      ).toString()),
-      setState: (void Function() fn) {  },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,12 +16,18 @@ class _LocationViewState extends State<LocationView> {
           children: [
             const TitleView('LOCATION'),
             const SizedBox(height: 10),
-            SizedBox(
-              width: 300,
-              height: 310,
-              child: WebView(
-                controller: RootPageController.to.webViewController,
-              ),
+            GestureDetector(
+              onTap: () {
+                // launchUrl(Uri.parse('kakaomap://place?id=1807085957'));
+                launchUrl(Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place'));
+              },
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: R.image.map.image(
+                    width: 300,
+                    height: 250,
+                    fit: BoxFit.cover
+                  )),
             ),
             const SizedBox(height: 8),
             Text(
