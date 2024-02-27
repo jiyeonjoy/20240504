@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Future<T> contactDialog<T>() async {
   return await Get.generalDialog(
@@ -33,10 +34,10 @@ Future<T> contactDialog<T>() async {
                     style: textStyleBlackBold(24),
                   ),
                   const SizedBox(height: 40),
-                  _buildContactRow('신랑 부', '신종식'),
-                  _buildContactRow('신랑 모', '손희송'),
-                  _buildContactRow('신부 부', '최성식'),
-                  _buildContactRow('신부 모', '허인숙'),
+                  _buildContactRow('신랑 부', '신종식', '010-6399-6406'),
+                  _buildContactRow('신랑 모', '손희송', '010-6399-6406'),
+                  _buildContactRow('신부 부', '최성식', '010-3644-4126'),
+                  _buildContactRow('신부 모', '허인숙', '010-3190-1416'),
                 ],
               ),
             ),
@@ -45,7 +46,7 @@ Future<T> contactDialog<T>() async {
       });
 }
 
-Widget _buildContactRow(String title, String name) {
+Widget _buildContactRow(String title, String name, String phoneNumber) {
   return SizedBox(
     height: 50,
     child: Row(
@@ -63,18 +64,38 @@ Widget _buildContactRow(String title, String name) {
         Padding(
           padding: edgeInsets(top: 5),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _makePhoneCall(phoneNumber);
+            },
             icon: R.image.icon_phone.image(width: 24),
           ),
         ),
         Padding(
           padding: edgeInsets(top: 5),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _makeSms(phoneNumber);
+            },
             icon: R.image.icon_email.image(width: 24),
           ),
         ),
       ],
     ),
   );
+}
+
+Future<void> _makePhoneCall(String phoneNumber) async {
+  final Uri launchUri = Uri(
+    scheme: 'tel',
+    path: phoneNumber,
+  );
+  await launchUrl(launchUri);
+}
+
+Future<void> _makeSms(String phoneNumber) async {
+  final Uri launchUri = Uri(
+    scheme: 'sms',
+    path: phoneNumber,
+  );
+  await launchUrl(launchUri);
 }
