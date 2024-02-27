@@ -31,8 +31,6 @@ class AppImages {
   AppImage get youngwoojiyeon9 =>
       const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_9.jpg');
 
-  AppImage get couple =>
-      const AppImage('${_imagePath}couple.png');
   AppImage get banner =>
       const AppImage('${_imagePath}banner.png');
   AppImage get thankYou =>

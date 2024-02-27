@@ -9,8 +9,12 @@ class MainView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        R.image.couple.image(
-          fit: BoxFit.cover,
+        SizedBox(
+          width: double.infinity,
+          height: 550,
+          child: R.image.youngwoojiyeon3.image(
+            fit: BoxFit.cover,
+          ),
         ),
         Padding(
           padding: edgeInsets(top: 30, horizontal: 20),
