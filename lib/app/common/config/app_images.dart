@@ -13,23 +13,23 @@ class AppImages {
   static const String _youngwoojiyeonPath = '${_imagePath}youngwoo_jiyeon/';
 
   AppImage get youngwoojiyeon1 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_1.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_1.jpg');
   AppImage get youngwoojiyeon2 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_2.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_2.jpg');
   AppImage get youngwoojiyeon3 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_3.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_3.jpg');
   AppImage get youngwoojiyeon4 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_4.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_4.jpg');
   AppImage get youngwoojiyeon5 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_5.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_5.jpg');
   AppImage get youngwoojiyeon6 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_6.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_6.jpg');
   AppImage get youngwoojiyeon7 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_7.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_7.jpg');
   AppImage get youngwoojiyeon8 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_8.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_8.jpg');
   AppImage get youngwoojiyeon9 =>
-      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_9.jpeg');
+      const AppImage('${_youngwoojiyeonPath}youngwoo_jiyeon_9.jpg');
 
   AppImage get couple =>
       const AppImage('${_imagePath}couple.png');
