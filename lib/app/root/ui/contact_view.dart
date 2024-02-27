@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:flutter_20240504/app/root/ui/contact_dialog.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactView extends StatelessWidget {
   const ContactView({super.key});
@@ -13,8 +14,8 @@ class ContactView extends StatelessWidget {
       child: Column(
         children: [
           R.image.icon_botanical.image(),
-          _buildSubView('신종식 · 손희송', '  의  아들  ', '신영우'),
-          _buildSubView('최성식 · 허인숙', '  의   딸  ', '최지연'),
+          _buildSubView('신종식 · 손희송', '  의  아들  ', '신영우', '010-6399-6406'),
+          _buildSubView('최성식 · 허인숙', '  의   딸  ', '최지연', '010-8929-0209'),
           const SizedBox(height: 25),
           _buildContactButton(),
         ],
@@ -22,7 +23,7 @@ class ContactView extends StatelessWidget {
     );
   }
 
-  Widget _buildSubView(String first, String second, String third) {
+  Widget _buildSubView(String first, String second, String third, String phoneNumber) {
     return Container(
       padding: edgeInsets(top: 10),
       alignment: Alignment.center,
@@ -46,7 +47,9 @@ class ContactView extends StatelessWidget {
           Padding(
             padding: edgeInsets(top: 5),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                _makePhoneCall(phoneNumber);
+              },
               icon: R.image.icon_phone_round.image(width: 24),
             ),
           ),
@@ -76,5 +79,13 @@ class ContactView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    await launchUrl(launchUri);
   }
 }
