@@ -1,3 +1,4 @@
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
@@ -66,7 +67,7 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            PageView.builder(
+            ExpandablePageView.builder(
               controller: _pageController,
               itemCount: RootPageController.to.galleryList.length,
               itemBuilder: (context, index) {
