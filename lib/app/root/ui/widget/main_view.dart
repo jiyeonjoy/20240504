@@ -17,7 +17,7 @@ class MainView extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: edgeInsets(top: 30, horizontal: 20),
+          padding: edgeInsets(top: 50, horizontal: 20),
           child: Text(
             '신  영  우\n그리고\n최  지  연',
             style: textStyleBlackNormal(30, height: 30/20),

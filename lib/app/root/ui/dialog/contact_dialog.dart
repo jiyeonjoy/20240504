@@ -19,11 +19,11 @@ Future<T> contactDialog<T>() async {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
-            color: R.color.white,
             elevation: 5,
             child: Container(
               constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
               padding: edgeInsets(top: 10, bottom: 30, horizontal: 40),
+              color: R.color.white,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
