@@ -54,6 +54,12 @@ class AppImages {
       const AppImage('${_iconPath}up.png');
   AppImage get icon_link =>
       const AppImage('${_iconPath}link.png');
+  AppImage get icon_close =>
+      const AppImage('${_iconPath}close.png');
+  AppImage get icon_left =>
+      const AppImage('${_iconPath}left.png');
+  AppImage get icon_right =>
+      const AppImage('${_iconPath}right.png');
 }
 
 class AppImage {

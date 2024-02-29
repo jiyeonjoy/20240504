@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:flutter_20240504/app/common/ui/title_view.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
+import 'package:flutter_20240504/app/root/ui/dialog/image_detail_dialog.dart';
 
 class GalleryView extends StatelessWidget {
   const GalleryView({super.key});
@@ -22,9 +23,14 @@ class GalleryView extends StatelessWidget {
               itemCount: RootPageController.to.galleryList.length,
               shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  padding: edgeInsets(vertical: 2),
-                  child: RootPageController.to.galleryList[index].image(),
+                return GestureDetector(
+                  onTap: () {
+                    showImageDetailDialog(index);
+                  },
+                  child: Container(
+                    padding: edgeInsets(vertical: 2),
+                    child: RootPageController.to.galleryList[index].image(),
+                  ),
                 );
               }
           )
