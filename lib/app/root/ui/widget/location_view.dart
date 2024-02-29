@@ -1,9 +1,7 @@
 import 'dart:html';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
-import 'package:flutter_20240504/app/common/ui/common_snackbar.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:flutter_20240504/app/common/ui/title_view.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -23,14 +21,12 @@ class LocationView extends StatelessWidget {
             GestureDetector(
               onTap: () async {
                 String userAgent = window.navigator.userAgent.toLowerCase();
-                if (kIsWeb) {
-                  CommonSnackBar.show('KIsWeb...$userAgent');
-                  Uri url = Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place');
-                  // launchUrl(url);
-                } else {
-                  CommonSnackBar.show('!!!!!!KIsWeb...$userAgent');
+                if (userAgent.contains('android') || userAgent.contains('iphone')) {
                   Uri url = Uri.parse('kakaomap://place?id=1807085957');
-                  // launchUrl(url);
+                  launchUrl(url);
+                } else {
+                  Uri url = Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place');
+                  launchUrl(url);
                 }
               },
               child: ClipRRect(
