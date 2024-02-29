@@ -6,10 +6,10 @@ class RootPageController extends GetxController {
 
   final galleryList = [
     R.image.youngwoojiyeon1,
-    R.image.youngwoojiyeon2,
     R.image.youngwoojiyeon3,
-    R.image.youngwoojiyeon4,
+    R.image.youngwoojiyeon2,
     R.image.youngwoojiyeon5,
+    R.image.youngwoojiyeon4,
     R.image.youngwoojiyeon6,
     R.image.youngwoojiyeon7,
     R.image.youngwoojiyeon8,

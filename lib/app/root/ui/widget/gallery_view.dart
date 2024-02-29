@@ -23,7 +23,7 @@ class GalleryView extends StatelessWidget {
               shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  padding: edgeInsets(all: 10),
+                  padding: edgeInsets(vertical: 2),
                   child: RootPageController.to.galleryList[index].image(),
                 );
               }

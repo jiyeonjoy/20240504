@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
-import 'package:flutter_20240504/app/root/ui/contact_dialog.dart';
+import 'package:flutter_20240504/app/root/ui/widget/contact_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactView extends StatelessWidget {

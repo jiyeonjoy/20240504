@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/base_container.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
-import 'package:flutter_20240504/app/root/ui/calendar_view.dart';
-import 'package:flutter_20240504/app/root/ui/contact_view.dart';
-import 'package:flutter_20240504/app/root/ui/gallery_view.dart';
-import 'package:flutter_20240504/app/root/ui/greeting_view.dart';
-import 'package:flutter_20240504/app/root/ui/location_view.dart';
-import 'package:flutter_20240504/app/root/ui/main_view.dart';
-import 'package:flutter_20240504/app/root/ui/transfer_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/calendar_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/contact_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/gallery_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/greeting_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/location_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/main_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/transfer_view.dart';
 import 'package:get/get.dart';
 
 class RootPage extends GetView<RootPageController> {
@@ -30,7 +30,7 @@ class RootPage extends GetView<RootPageController> {
                   GreetingView(),
                   ContactView(),
                   CalendarView(),
-                  // GalleryView(),
+                  GalleryView(),
                   LocationView(),
                   TransferView(),
                 ],
