@@ -1,7 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
-import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
 import 'package:get/get.dart';
 
@@ -45,16 +44,11 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: edgeInsets(all: 30),
+    return Align(
       alignment: Alignment.center,
-      child: Card(
-        clipBehavior: Clip.hardEdge,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
-        color: R.color.color_333333,
-        elevation: 5,
+      child: Container(
+        constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
+        color: R.color.black,
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -62,12 +56,8 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
               controller: _swiperController,
               itemCount: RootPageController.to.galleryList.length,
               itemBuilder: (context, index) {
-                return Container(
-                  color: R.color.black,
-                  constraints: const BoxConstraints(minWidth: 100, maxWidth: 500),
-                  child: RootPageController.to.galleryList[index].image(
-                    fit: BoxFit.fitWidth,
-                  ),
+                return RootPageController.to.galleryList[index].image(
+                  fit: BoxFit.fitWidth,
                 );
               },
             ),
@@ -100,7 +90,7 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
               ),
             ),
           ],
-        )
+        ),
       ),
     );
   }
