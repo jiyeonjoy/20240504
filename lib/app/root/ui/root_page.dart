@@ -30,7 +30,7 @@ class RootPage extends GetView<RootPageController> {
                   GreetingView(),
                   ContactView(),
                   CalendarView(),
-                  GalleryView(),
+                  // GalleryView(),
                   LocationView(),
                   TransferView(),
                 ],
