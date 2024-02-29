@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
@@ -18,14 +19,13 @@ class LocationView extends StatelessWidget {
             const SizedBox(height: 10),
             GestureDetector(
               onTap: () async {
-                Uri url1 = Uri.parse('kakaomap://place?id=1807085957');
-                launchUrl(url1);
-                // Uri url2 = Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place');
-                // if (await canLaunchUrl(url1)) {
-                //   launchUrl(url1);
-                // } else if (await canLaunchUrl(url2)) {
-                //   launchUrl(url2);
-                // }
+                if (kIsWeb) {
+                  Uri url = Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place');
+                  launchUrl(url);
+                } else {
+                  Uri url = Uri.parse('kakaomap://place?id=1807085957');
+                  launchUrl(url);
+                }
               },
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
