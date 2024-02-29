@@ -33,8 +33,6 @@ class AppImages {
 
   AppImage get banner =>
       const AppImage('${_imagePath}banner.png');
-  AppImage get thankYou =>
-      const AppImage('${_imagePath}thankYou.png');
   AppImage get bg_img_white => const AppImage('${_imagePath}bg_img_white.jpg');
   AppImage get map => const AppImage('${_imagePath}map.png');
 
@@ -50,6 +48,10 @@ class AppImages {
       const AppImage('${_iconPath}email.png');
   AppImage get icon_bee =>
       const AppImage('${_iconPath}bee.png');
+  AppImage get icon_down =>
+      const AppImage('${_iconPath}down.png');
+  AppImage get icon_up =>
+      const AppImage('${_iconPath}up.png');
 }
 
 class AppImage {
