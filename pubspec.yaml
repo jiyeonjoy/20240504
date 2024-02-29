@@ -18,7 +18,7 @@ dependencies:
   get: ^4.6.6
 
   url_launcher: ^6.2.4
-  expandable_page_view: ^1.0.17
+  card_swiper: ^3.0.1
 
 dev_dependencies:
   flutter_test:

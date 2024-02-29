@@ -1,4 +1,4 @@
-import 'package:expandable_page_view/expandable_page_view.dart';
+import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
 import 'package:flutter_20240504/app/common/ui/edge_insets.dart';
@@ -26,29 +26,20 @@ class ImageDetailDialog extends StatefulWidget {
 }
 
 class _ImageDetailDialogState extends State<ImageDetailDialog> {
-  late PageController _pageController;
+  late SwiperController _swiperController;
   int _currentPage = 0;
-  int _lastPage = 0;
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(initialPage: widget.index);
-    _pageController.addListener(() {
-      int next = _pageController.page!.round();
-      if (_currentPage != next) {
-        setState(() {
-          _currentPage = next;
-        });
-      }
-    });
     _currentPage = widget.index;
-    _lastPage = RootPageController.to.galleryList.length-1;
+    _swiperController = SwiperController();
+    _swiperController.index = _currentPage;
   }
 
   @override
   void dispose() {
-    _pageController.dispose();
+    _swiperController.dispose();
     super.dispose();
   }
 
@@ -67,8 +58,8 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            ExpandablePageView.builder(
-              controller: _pageController,
+            Swiper(
+              controller: _swiperController,
               itemCount: RootPageController.to.galleryList.length,
               itemBuilder: (context, index) {
                 return Container(
@@ -91,33 +82,19 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
               ),
             ),
             Positioned(
-              left: 10,
+              left: 0,
               child: IconButton(
                 onPressed: () {
-                  if (_currentPage == 0) {
-                    _pageController.jumpToPage(_lastPage);
-                  } else {
-                    _pageController.previousPage(
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.ease,
-                    );
-                  }
+                  _swiperController.previous();
                 },
                 icon: R.image.icon_left.imageSize(size: 24),
               ),
             ),
             Positioned(
-              right: 10,
+              right: 0,
               child: IconButton(
                 onPressed: () {
-                  if (_currentPage == _lastPage) {
-                    _pageController.jumpToPage(0);
-                  } else {
-                    _pageController.nextPage(
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.ease,
-                    );
-                  }
+                  _swiperController.next();
                 },
                 icon: R.image.icon_right.imageSize(size: 24),
               ),
