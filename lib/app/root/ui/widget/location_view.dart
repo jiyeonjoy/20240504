@@ -19,12 +19,13 @@ class LocationView extends StatelessWidget {
             GestureDetector(
               onTap: () async {
                 Uri url1 = Uri.parse('kakaomap://place?id=1807085957');
-                Uri url2 = Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place');
-                if (await canLaunchUrl(url1)) {
-                  launchUrl(url1);
-                } else if (await canLaunchUrl(url2)) {
-                  launchUrl(url2);
-                }
+                launchUrl(url1);
+                // Uri url2 = Uri.parse('https://m.map.kakao.com/actions/detailMapView?id=1807085957&refService=place');
+                // if (await canLaunchUrl(url1)) {
+                //   launchUrl(url1);
+                // } else if (await canLaunchUrl(url2)) {
+                //   launchUrl(url2);
+                // }
               },
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),

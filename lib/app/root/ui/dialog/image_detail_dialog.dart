@@ -1,7 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_20240504/app/common/config/r.dart';
-import 'package:flutter_20240504/app/common/ui/zoom_widget.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
 import 'package:get/get.dart';
 
@@ -57,7 +56,10 @@ class _ImageDetailDialogState extends State<ImageDetailDialog> {
               controller: _swiperController,
               itemCount: RootPageController.to.galleryList.length,
               itemBuilder: (context, index) {
-                return ZoomWidget(
+                return InteractiveViewer(
+                  boundaryMargin: const EdgeInsets.all(0.0),
+                  minScale: 1.0,
+                  panEnabled: true,
                   child: RootPageController.to.galleryList[index].image(
                     fit: BoxFit.fitWidth,
                   ),
