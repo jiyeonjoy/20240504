@@ -4,6 +4,7 @@ import 'package:flutter_20240504/app/common/ui/base_container.dart';
 import 'package:flutter_20240504/app/root/controller/root_page_controller.dart';
 import 'package:flutter_20240504/app/root/ui/widget/calendar_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/contact_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/copy_url_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/gallery_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/greeting_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/location_view.dart';
@@ -33,6 +34,7 @@ class RootPage extends GetView<RootPageController> {
                   GalleryView(),
                   LocationView(),
                   TransferView(),
+                  CopyUrlView(),
                 ],
               ),
             ),
