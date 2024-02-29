@@ -14,26 +14,8 @@ class ToggleView extends StatefulWidget {
   State<ToggleView> createState() => _ToggleViewState();
 }
 
-class _ToggleViewState extends State<ToggleView>
-    with SingleTickerProviderStateMixin {
-
-  late final AnimationController _controller = AnimationController(
-    duration: const Duration(milliseconds: 300),
-    vsync: this,
-  );
-
-  late final Animation<double> _animation = CurvedAnimation(
-    parent: _controller,
-    curve: Curves.fastOutSlowIn,
-  );
-
+class _ToggleViewState extends State<ToggleView> {
   var isOpen = false;
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +23,6 @@ class _ToggleViewState extends State<ToggleView>
       children: [
         GestureDetector(
           onTap: () {
-            if (isOpen) {
-              _controller.reverse();
-            } else {
-              _controller.forward();
-            }
             setState(() {
               isOpen = !isOpen;
             });
@@ -73,17 +50,15 @@ class _ToggleViewState extends State<ToggleView>
             ),
           ),
         ),
-        SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          child: Column(
+        if (isOpen) ...[
+          Column(
             children: [
               _buildSubView(widget.data.child),
               _buildSubView(widget.data.father),
               _buildSubView(widget.data.mother, hasSeparator: false),
             ],
           ),
-        ),
+        ],
       ],
     );
   }
@@ -129,25 +104,21 @@ class _ToggleViewState extends State<ToggleView>
   }
 
   Widget _buildCopyButton(String account) {
-    return SizedBox(
-      // width: 320,
-      // height: 42,
-      child: ElevatedButton(
-        onPressed: () {
-          Clipboard.setData(ClipboardData(text: account));
-          CommonSnackBar.show('계좌번호가 복사되었습니다.');
-        },
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.resolveWith((states) => R.color.color_171819),
-          shape: MaterialStateProperty.resolveWith((states) => RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          )),
-        ),
-        child: Text(
-          '복사하기',
-          style: textStyleWhiteMedium(12),
-          textAlign: TextAlign.center,
-        ),
+    return ElevatedButton(
+      onPressed: () {
+        Clipboard.setData(ClipboardData(text: account));
+        CommonSnackBar.show('계좌번호가 복사되었습니다.');
+      },
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.resolveWith((states) => R.color.color_171819),
+        shape: MaterialStateProperty.resolveWith((states) => RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        )),
+      ),
+      child: Text(
+        '복사하기',
+        style: textStyleWhiteMedium(12),
+        textAlign: TextAlign.center,
       ),
     );
   }
