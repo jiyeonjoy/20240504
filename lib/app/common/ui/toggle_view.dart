@@ -42,9 +42,9 @@ class _ToggleViewState extends State<ToggleView> {
                   ),
                 ),
                 if (isOpen) ...[
-                  R.image.icon_down.imageSize(size: 20)
-                ] else ...[
                   R.image.icon_up.imageSize(size: 20)
+                ] else ...[
+                  R.image.icon_down.imageSize(size: 20)
                 ]
               ],
             ),
