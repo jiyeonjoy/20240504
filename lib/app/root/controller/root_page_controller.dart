@@ -29,16 +29,16 @@ class RootPageController extends GetxController {
   ];
 
   final youngWooTransferData = FamilyTransferInfoData(
-      '신랑측 마음 전하는 곳',
+      '신랑 측 마음 전하는 곳',
       TransferInfoData('신영우', '카카오뱅크', '3333-14-3664702'),
-      TransferInfoData('신종식', '하나은행', '111-1111-1111'),
+      TransferInfoData('신종식', '신한은행', '100-022-461414'),
       TransferInfoData('손희송', '신한은행', '110-034-183346'),
   );
 
   final jiYeonTransferData = FamilyTransferInfoData(
-    '신부측 마음 전하는 곳',
+    '신부 측 마음 전하는 곳',
     TransferInfoData('최지연', '카카오뱅크', '3333-02-1676984'),
-    TransferInfoData('최성식', '하나은행', '111-1111-1111'),
-    TransferInfoData('허인숙', '하나은행', '111-1111-1111'),
+    TransferInfoData('최성식', '농협', '665-02-064498'),
+    TransferInfoData('허인숙', '농협', '631011-52-063537'),
   );
 }
