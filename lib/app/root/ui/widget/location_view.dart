@@ -59,6 +59,7 @@ class LocationView extends StatelessWidget {
                   '지하철',
                   style: textStyleBold(R.color.color_594E47, 17),
                 ),
+                const SizedBox(height: 4),
                 Text(
                   '고속터미널역(3,7,9호선) 5번 출구 방향으로 나와\n서래공원 방면 신호등 건넌 후 첫번째 건물\n(반포 효성빌딩) LL층 (지하 2층)',
                   style: textStyleNormal(R.color.color_594E47, 15),
@@ -68,6 +69,7 @@ class LocationView extends StatelessWidget {
                   '버스',
                   style: textStyleBold(R.color.color_594E47, 17),
                 ),
+                const SizedBox(height: 4),
                 Text(
                   '간선 : 405, 740 / 지선 : 5413 / 공항버스 : 6703\n서울 지방 조달청역 하차. 반포 효성빌딩 LL층(지하 2층)',
                   style: textStyleNormal(R.color.color_594E47, 15),
