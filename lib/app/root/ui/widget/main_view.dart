@@ -12,7 +12,7 @@ class MainView extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           height: 550,
-          child: R.image.youngwoojiyeon3.image(
+          child: R.image.youngwoojiyeonMain.image(
             fit: BoxFit.cover,
           ),
         ),
