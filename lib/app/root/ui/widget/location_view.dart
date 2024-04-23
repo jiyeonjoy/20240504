@@ -56,6 +56,16 @@ class LocationView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
+                  '자가용',
+                  style: textStyleBold(R.color.color_594E47, 17),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  '서울특별시 서초구 반포대로 235 효성빌딩 LL층\n아펠가모 반포웨딩홀(웨딩홀 지하주차장 이용시 2시간 무료주차)',
+                  style: textStyleNormal(R.color.color_594E47, 15),
+                ),
+                const SizedBox(height: 24),
+                Text(
                   '지하철',
                   style: textStyleBold(R.color.color_594E47, 17),
                 ),
@@ -64,7 +74,7 @@ class LocationView extends StatelessWidget {
                   '고속터미널역(3,7,9호선) 5번 출구 방향으로 나와\n서래공원 방면 신호등 건넌 후 첫번째 건물\n(반포 효성빌딩) LL층 (지하 2층)',
                   style: textStyleNormal(R.color.color_594E47, 15),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 24),
                 Text(
                   '버스',
                   style: textStyleBold(R.color.color_594E47, 17),
