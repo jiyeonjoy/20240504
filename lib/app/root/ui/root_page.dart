@@ -10,6 +10,7 @@ import 'package:flutter_20240504/app/root/ui/widget/greeting_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/location_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/main_view.dart';
 import 'package:flutter_20240504/app/root/ui/widget/transfer_view.dart';
+import 'package:flutter_20240504/app/root/ui/widget/video_view.dart';
 import 'package:get/get.dart';
 
 class RootPage extends GetView<RootPageController> {
@@ -32,6 +33,7 @@ class RootPage extends GetView<RootPageController> {
                   ContactView(),
                   CalendarView(),
                   GalleryView(),
+                  VideoView(),
                   LocationView(),
                   TransferView(),
                   CopyUrlView(),

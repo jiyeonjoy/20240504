@@ -19,6 +19,7 @@ dependencies:
 
   url_launcher: ^6.2.4
   card_swiper: ^3.0.1
+  youtube_player_iframe: ^4.0.4
 
 dev_dependencies:
   flutter_test:
